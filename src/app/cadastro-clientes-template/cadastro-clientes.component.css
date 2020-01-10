@@ -1,0 +1,39 @@
+.box-cadastro {
+    margin: 30px;
+    padding: 30px;
+    }
+    .cadastro {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 0;
+    outline: none;
+    height: 50px;
+    }
+    .btn-cadastro {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #dcbc81;
+    font-weight: bold;
+    }
+.ng-invalid.ng-touched:not(form){
+    border: 1px solid red;
+}
+
+.campo-obrigatorio {
+    color: red;
+    
+}
+
+.btn-voltar {
+    position: absolute !important;
+    top: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 10%;
+    background: #000;
+    color: #fff;
+    border: 2px solid;
+    }
