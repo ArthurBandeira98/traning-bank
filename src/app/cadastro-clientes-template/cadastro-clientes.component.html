@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row box-cadastro">
+    <div class="col-12">
+    <h3 class="text-center">Você está a um passo de criar sua conta Training Banking</h3>
+    <br>
+    <br>
+    <form class="form-horizontal" #f="ngForm" (ngSubmit)="onSubmit(f)">
+        
+    <div class="form-group col-sm-12">
+    <input type="text" class="form-control cadastro" name="nome" placeholder="Nome" ngModel required #nome="ngModel">
+    <div *ngIf="!nome.valid && nome.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+    <input type="number" class="form-control cadastro" name="cpf" placeholder="CPF" ngModel required #cpf="ngModel">
+    <div *ngIf="!cpf.valid && cpf.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+    <input type="email" class="form-control cadastro" name="email" placeholder="E-mail" ngModel required email #email="ngModel">
+    <div *ngIf="!email.valid && email.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+    <div class="form-group col-sm-12"> 
+    <input type="tel" class="form-control cadastro" name="telefone" placeholder="Telefone" ngModel required #telefone="ngModel">
+    <div *ngIf="!telefone.valid && telefone.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+
+    
+    <div class="form-group col-sm-12">
+    <input type="text" class="form-control cadastro" name="cep" placeholder="CEP"
+    ngModel required #cep="ngModel" (blur)="consultaCEP($event.target.value, f)">
+    <div *ngIf="!cep.valid && cep.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+    <input type="text" class="form-control cadastro" name="estado" placeholder="Estado"
+    ngModel required #estado="ngModel">
+    <div *ngIf="!estado.valid && estado.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+    <input type="text" class="form-control cadastro" name="cidade" placeholder="Cidade"
+    ngModel required #cidade="ngModel">
+    <div *ngIf="!cidade.valid && cidade.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+    <input type="text" class="form-control cadastro" name="bairro" placeholder="Bairro"
+    ngModel required #bairro="ngModel">
+    <div *ngIf="!bairro.valid && bairro.touched" class="campo-obrigatorio">
+            <b> Campo obrigatório </b>
+        </div>
+    </div>
+
+    <div class="form-group col-sm-12">
+    <input type="text" class="form-control cadastro" name="rua" placeholder="Rua"
+    ngModel required #rua="ngModel">
+    <div *ngIf="!rua.valid && rua.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+    
+    <div class="form-group col-sm-12">
+    <input type="number" class="form-control cadastro" name="numero" placeholder="Numero"
+    ngModel required #numero="ngModel">
+    <div *ngIf="!numero.valid && numero.touched" class="campo-obrigatorio">
+        <b> Campo obrigatório </b>
+    </div>
+    </div>
+
+
+
+
+
+    <button type="submit" class="btn btn-cadastro btn-lg"
+        [disabled]="!f.valid">Cadastrar</button>
+    </form>
+    </div>
+</div>
+</div>
