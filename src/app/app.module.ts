@@ -1,3 +1,4 @@
+import { AuthService } from './login/auth.service';
 import { DropdownService } from './service/dropdown.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -13,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import 'rxjs/operators';
 import { CadastroDataDrivenComponent } from './cadastro-data-driven/cadastro-data-driven.component';
+import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import { CadastroDataDrivenComponent } from './cadastro-data-driven/cadastro-dat
     ContentComponent,
     FooterComponent,
     CadastroClientesComponent,
-    CadastroDataDrivenComponent
+    CadastroDataDrivenComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { CadastroDataDrivenComponent } from './cadastro-data-driven/cadastro-dat
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ DropdownService ],
+  providers: [ DropdownService, AuthService, AuthGuard ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
